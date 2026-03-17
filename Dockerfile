@@ -42,6 +42,8 @@ RUN echo "/opt/conda/bin/conda init > /dev/null " >> /etc/profile.d/conda.sh && 
 ## install OLLAMA
 RUN curl -fsSL https://ollama.com/install.sh | sh
 ## --------------------------- ##
-
-# DO NOT EDIT USER VALUE
-USER jovyan
+RUN /opt/conda/envs/pytorchgpu/bin/pip install \
+    ninja \
+    langchain \
+    packaging \
+    unsloth
