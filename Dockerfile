@@ -39,8 +39,8 @@ RUN echo "/opt/conda/bin/conda init > /dev/null " >> /etc/profile.d/conda.sh && 
     echo "exec /bin/bash" >> /etc/profile
 
 #WORKDIR /home/jovyan
-## -- TODO: update the image 
-
+## install OLLAMA
+RUN curl -fsSL https://ollama.com/install.sh | sh
 ## --------------------------- ##
 
 # DO NOT EDIT USER VALUE
